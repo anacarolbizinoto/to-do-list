@@ -30,8 +30,8 @@ header {
 }
 
 
-header h1 {
-    font-size: 2.5 rem;
+h1 {
+    font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: 1rem;
     color: var(--gray)
@@ -52,7 +52,7 @@ input, button {
 #nova-tarefa-input {
     font-size: 1.25rem;
     flex: 1 1 0%;
-    background-color: var (--darker);
+    background-color: var(--darker);
     padding: 1rem;
     border-radius: 1rem;
     margin-right: 1rem;
@@ -76,17 +76,70 @@ input, button {
 }
 
 #nova-tarefa-submeter:hover {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #nova-tarefa-submeter:active {
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 main {
     flex: 1 1 0%;
-    padding: 2 rem 1 rem;
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
+}
+
+.lista-de-tarefas {
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+#tarefas .tarefa {
+    display: flex;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+#tarefas .tarefa .conteudo .texto {
+    display: block;
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    transition: 0.4s;
+}
+
+#tarefas .tarefa .conteudo .texto:not(:read-only) {
+    color: var(--pink);
+}
+
+#tarefas .tarefa .funcoes {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.tarefa .funcoes button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.tarefa .funcoes button:hover {
+    opacity: 0.9;
+}
+
+.tarefa .funcoes button:active {
+    opacity: 0.4;
 }
