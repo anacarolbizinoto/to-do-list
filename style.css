@@ -143,3 +143,15 @@ h2 {
 .tarefa .funcoes button:active {
     opacity: 0.4;
 }
+
+.tarefa .funcoes .editar {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.tarefa .funcoes .deletar {
+    color: red;
+}
