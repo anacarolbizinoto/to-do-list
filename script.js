@@ -1,12 +1,12 @@
 window.addEventListener('load', () => {
-	const form = document.querySelector("#nova-tarefa");
+	const novaTarefa = document.querySelector("#nova-tarefa");
 	const input = document.querySelector("#nova-tarefa-input");
-	const list_el = document.querySelector("#tarefas");
+	const elementosDaLista = document.querySelector("#tarefas");
 
-	form.addEventListener('submit', (e) => {
+	novaTarefa.addEventListener('submit', (e) => {
 		e.preventDefault();
 
-		const task = input.value;
+		const tarefa = input.value;
 
 		const task_el = document.createElement('div');
 		task_el.classList.add('tarefa');
@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
 		const task_input_el = document.createElement('input');
 		task_input_el.classList.add('texto');
 		task_input_el.type = 'texto';
-		task_input_el.value = task;
+		task_input_el.value = tarefa;
 		task_input_el.setAttribute('readonly', 'readonly');
 
 		task_content_el.appendChild(task_input_el);
@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
 
 		task_el.appendChild(task_actions_el);
 
-		list_el.appendChild(task_el);
+		elementosDaLista.appendChild(task_el);
 
 		input.value = '';
 
@@ -56,7 +56,7 @@ window.addEventListener('load', () => {
 		});
 
 		task_delete_el.addEventListener('click', (e) => {
-			list_el.removeChild(task_el);
+			elementosDaLista.removeChild(task_el);
 		});
 	});
 });
