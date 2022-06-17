@@ -8,13 +8,13 @@ window.addEventListener('load', () => {
 
 		const tarefa = input.value;
 
-		const task_el = document.createElement('div');
-		task_el.classList.add('tarefa');
+		const divhtml = document.createElement('div');
+		divhtml.classList.add('tarefa');
 
 		const task_content_el = document.createElement('div');
 		task_content_el.classList.add('conteudo');
 
-		task_el.appendChild(task_content_el);
+		divhtml.appendChild(task_content_el);
 
 		const task_input_el = document.createElement('input');
 		task_input_el.classList.add('texto');
@@ -38,9 +38,9 @@ window.addEventListener('load', () => {
 		task_actions_el.appendChild(task_edit_el);
 		task_actions_el.appendChild(task_delete_el);
 
-		task_el.appendChild(task_actions_el);
+		divhtml.appendChild(task_actions_el);
 
-		elementosDaLista.appendChild(task_el);
+		elementosDaLista.appendChild(divhtml);
 
 		input.value = '';
 
@@ -56,7 +56,7 @@ window.addEventListener('load', () => {
 		});
 
 		task_delete_el.addEventListener('click', (e) => {
-			elementosDaLista.removeChild(task_el);
+			elementosDaLista.removeChild(divhtml);
 		});
 	});
 });
