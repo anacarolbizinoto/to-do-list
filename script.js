@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
 	novaTarefa.addEventListener('submit', (e) => {
 		e.preventDefault();
 
+
 		const tarefa = input.value;
 
 		const divhtml = document.createElement('div');
@@ -14,7 +15,7 @@ window.addEventListener('load', () => {
 		const task_content_el = document.createElement('div');
 		task_content_el.classList.add('conteudo');
 
-		divhtml.appendChild(task_content_el);
+		divhtml.appendChild(task_content_el); 
 
 		const task_input_el = document.createElement('input');
 		task_input_el.classList.add('texto');
@@ -22,7 +23,7 @@ window.addEventListener('load', () => {
 		task_input_el.value = tarefa;
 		task_input_el.setAttribute('readonly', 'readonly');
 
-		task_content_el.appendChild(task_input_el);
+		task_content_el.appendChild(task_input_el); 
 
 		const task_actions_el = document.createElement('div');
 		task_actions_el.classList.add('funcoes');
